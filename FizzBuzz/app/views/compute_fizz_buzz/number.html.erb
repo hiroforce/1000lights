@@ -1,0 +1,36 @@
+<div id="result">
+<div>
+<img id="fizz" src="http://cdn2.bigcommerce.com/server1100/xu4li/products/320/images/553/DSC_0024__26774.1354822728.1280.1280.jpg" class="hidden">
+<img id="buzz" src="http://www.learn2rap.com/wp-content/uploads/2011/01/building-buzz.jpg" class="hidden">
+</div>
+<script>
+var number = "<%= @fizzbuzznumber %>";
+if (number == "Fizz"){
+	$('#fizz').removeClass('hidden');
+	$('#fizz').addClass('fizz');
+} else if (number== "Buzz"){
+
+	$('#buzz').removeClass('hidden');
+	$('#buzz').addClass('buzz');
+} else {
+	
+	var snum = number.toString();
+	sz = snum.length;
+	var parts = snum.split("");
+	element = null;
+	for (var i = 0; i < sz; i++){
+		element = parts[i];
+		document.write('<img src="/images/');
+		document.write(element);
+		document.write('.png">');
+	}
+}
+</script>
+
+
+
+</div>
+<div>
+
+</div>
+

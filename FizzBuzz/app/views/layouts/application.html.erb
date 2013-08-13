@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FizzBuzz</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <style>
+  .hidden{
+  visibility:hidden;
+  width:1px;
+  height:auto;
+  }
+  .fizz{
+  transition: width 2s, height 2s;
+  width:250px;
+  height:auto;
+  
+  }
+  
+  .buzz{
+  transition: width 2s, height 2s;
+  width:250px;
+  height:auto;
+  
+  }
+  </style>
+  <%= javascript_include_tag "application" %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
